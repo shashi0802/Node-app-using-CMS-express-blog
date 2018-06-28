@@ -1,0 +1,10 @@
+{
+    "name": "cs-task",
+    "version": "0.0.1",
+    "dependencies": {
+        "contentstack-express": "^3.0.0"
+    },
+    "scripts": {
+        "start": "NODE_ENV=preview node app.js"
+    }
+}

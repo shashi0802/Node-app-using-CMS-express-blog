@@ -1,0 +1,12 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<div style="padding: 60px; margin-top: 60px">
+        <h1>{{ entry.blog_title.title }}</h1>
+        <div class="blog-image">
+            <img src="{{entry.image.url}}"></img>
+        </div>
+        <p>{{ entry.blog_text }}</p>
+    </div>
+{% endblock %}
+

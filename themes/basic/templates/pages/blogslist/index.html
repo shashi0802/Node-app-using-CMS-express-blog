@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<div class="bloger">
+        <ul class="bloger-list">
+            {% for blog in entries %}
+                <li>
+                    <a href="{{ blog.blog_title.href }}">{{ blog.blog_title.title }}</a>
+                </li>
+            {% else %}
+                <li>This would display if the 'item' collection were empty</li>
+            {% endfor %}
+
+        </ul>
+    </div>
+{% endblock %}

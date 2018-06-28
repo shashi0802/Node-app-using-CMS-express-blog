@@ -1,0 +1,70 @@
+{# If you have a "Content Type" for footer in Built.io Contentstack then use get() view helper to retrieve footer entry. #}
+{# e.g. set footer = get("footer_content_type_id") #}
+{# And then render footer values using the {{footer.field_name}} #}
+
+{# here code for footer #}
+{%set footer = get("footer")%}
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+
+    <!--Footer Links-->
+    <div class="container text-center text-md-left">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-4">
+                <a href="Index.html">
+                    <img src="{{footer.group.file.url}}"></img>
+                </div>
+                <!--/.First column-->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!--Second column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase mb-4 mt-3 font-weight-bold"></h5>
+                    <ul class="list-unstyled">
+                        {% for x in footer.group.footer_menu %}
+                            <li>
+                                <a href="{{x.menu.href}}">{{x.menu.title}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!--Third column-->
+                <div class="col-md-2 mx-auto">
+
+                    <ul class="list-unstyled">
+                        {% for x in footer.group.footer_social_media %}
+                            <li>
+                                <a href="{{x.social_media_menu.href}}">{{x.social_media_menu.title}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!--/.Third column-->
+            </div>
+        </div>
+
+    </footer>
+    <!--/.Footer-->
+    <div class="sticky-footer">
+        <div class="sticky-footer-main">
+            <!--Copyright-->
+            <div class="footer-copyright py-3 text-center">
+                {{footer.sticky_footer.copy_right}}
+            </div>
+            <!--/.Copyright-->
+            <!--privacy term and sitemap-->
+            <div class="sticky-footer-right">
+                <h5>
+                    {% for x in footer.sticky_footer.sticky_footer_link %}
+                        <a href="{{x.href}}">{{x.title}}</a>
+                    {% endfor %}
+                </h5>
+            </div>
+        </div>
+    </div>

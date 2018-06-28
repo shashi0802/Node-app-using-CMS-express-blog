@@ -1,0 +1,41 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+				<!--Form-->
+				<div class="registration-form-container">
+								<form method="POST" onsubmit="return validateField()">
+												<h1>{{entry.message_1}}</h1>
+												<h5>{{entry.message_2}}</h5>
+												<div class="registration-left-container">
+																<h4>{{entry.registration_form.message}}</h4>
+																<input type="text" id="fname" placeholder="{{entry.registration_form.first_name}}">
+																<input type="text" id="lname" placeholder="{{entry.registration_form.last_name}}">
+																<input type="email" id="email" placeholder="{{entry.registration_form.work_email}}">
+												</div>
+												<div class="registration-right-container">
+																<h4>{{data[2].entry.business_detail.message}}</h4>
+																<input type="text" id="cname" placeholder="{{entry.business_detail.company_name}}">
+																<input type="text" id="jtitle" placeholder="{{entry.business_detail.job_title}}">
+																<select type="text" id="slbutype" aria-placeholder=" Select businesstype">
+																				<option value="selectBusiness">{{entry.business_detail.select_bussiness_type[0]}}</option>
+																				<option value="accounting">{{entry.business_detail.select_bussiness_type[1]}}</option>
+																				<option value="agriculture">{{entry.business_detail.select_bussiness_type[2]}}</option>
+																				<option value="chemical">{{entry.business_detail.select_bussiness_type[3]}}</option>
+																</select>
+																<select type="text" id="selecthelpType" aria-placeholder="Select help topic..">
+																				<option value="helpType">{{entry.business_detail.select_help_topic_[0]}}</option>
+																				<option value="generalInfo">{{entry.business_detail.select_help_topic_[1]}}</option>
+																				<option value="freeTrial">{{entry.business_detail.select_help_topic_[2]}}</option>
+																				<option value="getDemo">{{entry.business_detail.select_help_topic_[3]}}</option>
+																</select>
+												</div>
+												<div class="registration-optional-texta">
+																<textarea id="feedback" placeholder="{{entry.feedback.feedback}}"></textarea>
+												</div>
+												<div class="registration-submit-buttun">
+																<button id="submit" type="submit">{{entry.business_detail.button.title}}</button>
+												</div>
+								</form>
+				</div>
+				<!--\.Form close-->
+{% endblock %}

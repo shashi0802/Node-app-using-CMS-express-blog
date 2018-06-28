@@ -1,0 +1,39 @@
+{# If you have a "Content Type" for header in Built.io Contentstack then use get() view helper to retrieve header entry. #}
+{# e.g. set header = get("header_content_type_id") #}
+{# And then render header values using the {{header.field_name}} #}
+
+{%set header = get("header")%}
+<div class="body-logo-menu">
+    <div class="body-logo">
+        {# <a href="Index.html">
+            <img src="../static/images/logo.png">
+        </a> #}
+        <a href="{{header.menu[0].link.href}}">
+            <img src="{{header.logo.url}}"></img>
+        </a>
+    </div>
+    <div class="body-menu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{header.menu[0].link.href}}">{{header.menu[0].link.title}}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{header.menu[1].link.href}}">{{header.menu[1].link.title}}</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Contact Us
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{header.menu[2].sub_menu[0].href}}">{{header.menu[2].sub_menu[0].title}}</a>
+                            <a class="dropdown-item" href="{{header.menu[2].sub_menu[1].href}}">{{header.menu[2].sub_menu[1].title}}</a>
+                            <a class="dropdown-item" href="{{header.menu[2].sub_menu[2].href}}">{{header.menu[2].sub_menu[2].title}}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,181 @@
+.body-mainz{
+    width: 100%;
+    height: 100%;
+    
+}
+.body-logo-menu{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+}
+.body-logo{
+width: 25%;
+height: auto;
+float: left;
+}
+.body-logo img{
+    width: 100%;
+    height: 100px;
+}
+.body-menu{
+    width: 100%;
+    height: 100px;
+    background-color: brown;
+}
+.body-menu nav{
+    float: right;
+    height: 100px;
+    background-color: brown !important;
+}
+.dropdown-item:hover {
+    background-color: brown !important;
+}
+.dropdown-menu{
+    background-color: brown !important;
+}
+
+.faq-question{
+    width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    left: 0;
+    right: 0;
+}
+
+.col-md-4 img{
+    width: 100%;
+    height: auto;
+}
+
+.page-footer{
+    background-color: gray !important;
+}
+
+
+.sticky-footer{
+    position: fixed;
+    width: 100%;
+    left: 0;;
+    bottom: 0;
+    background-color: gray;
+}
+.sticky-footer-main{
+    width: 1200px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.footer-copyright{
+    width: 35%;
+    float: left;
+    color: white !important;
+}
+.sticky-footer-right:hover{
+    cursor: pointer;
+    width: 100%;
+}
+.sticky-footer-right h5{
+    float: right;
+    text-align: center;
+    padding-top: 15px;
+}
+
+/*Here css code start for home page */
+.home-page-main-container{
+    width: 100%;
+    height: 100%;
+}
+
+.middle-body-container{
+    width: 1200px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    
+}
+.carousel img{
+widows: 100%;
+height: auto;
+}
+
+.pb-3{
+    margin: 10px;
+}
+
+/* css for blog */
+.bloger{
+    height: 50%;
+    padding-top: 8%;
+    padding-bottom: 11%;
+}
+.bloger-list{
+    list-style-type: none;
+}
+
+.blog-image img{
+    width: 15%;
+    height: 40%;
+}
+
+
+
+
+/* here is css for registration page */
+
+.registration-body{
+    width: 100%;
+    height: 100%;
+}
+
+.registration-form-container{
+    width: 1200px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+.registration-left-container{
+    width: 45%;
+    /* height: 100%; */
+    float: left;
+    
+    border-right: 1px solid black
+    
+}
+.registration-right-container{
+    width: 100%;
+    /* height: 100%;   */
+   
+}
+
+input[type=text]{
+    width: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+
+input[type=email]{
+    width: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+
+select[type=text]{
+    width: 24%;
+    padding: 5px;
+    margin: 10px;
+}
+.registration-optional-texta{
+    width: 100%;
+    height: auto;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    margin: 10px;
+}
+
+.registration-submit-buttun{
+    float: right;
+    right: 0;
+    margin: 0;
+}
